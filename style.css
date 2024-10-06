@@ -1,0 +1,197 @@
+/*======= Google fonts =======*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*======= Main Css =======*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*======= Main section Css =======*/
+.section-main {
+  background: #111622;
+  min-height: 100vh;
+}
+
+.main-title {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-title .title-part-one {
+  display: flex;
+  font-size: 6em;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 0 5px 25px rgb(17, 22, 34, 0.5);
+}
+
+.main-title .title-part-one .letter:not(:last-child) {
+  letter-spacing: 10px;
+}
+
+.title-blue {
+  color: #2696e9;
+}
+
+.title-red {
+  color: #f13171;
+}
+
+.main-title .title-part-two {
+  color: #fff;
+  display: flex;
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+.main-title .title-part-two .letter {
+  width: 60px;
+  text-align: center;
+}
+
+/*======= Section two Css =======*/
+
+.section-two {
+  background: #fefefe;
+  min-height: 100vh;
+}
+
+.card-container{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2.5em;
+    row-gap: 2.5em;
+}
+
+.card{
+    position: relative;
+    background: #fff;
+    width: 350px;
+    height: fit-content;
+    box-shadow: 0 5px 25px rgb(0,0,0,.2);
+    border-radius: 15px;
+}
+
+.card-image img {
+  width: 350px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card-info{
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-info .card-description{
+    color: #222;
+    font-weight: 1em;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.card-info .card-btn{
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1em;
+  padding: 8px 18px;
+  border-radius: 50px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.btn-blue{
+  background: #2696e9;
+}
+
+.btn-red{
+  background: #ff4653;
+}
+
+.card-info .card-media{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 35px;
+}
+
+.card-info .card-media a{
+  color: #999;
+  font-size: 1.8em;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+.card-info .card-media a:hover{
+   color: #3bd28e;
+}
+
+/*======= Media queries (max-width: 1210px) =======*/
+@media screen and (max-width: 1210px) {
+  .card-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  section{
+    padding: 100px 0;
+  }
+}
+
+/*======= Media queries (max-width: 825px) =======*/
+@media screen and (max-width: 825px) {
+  .card-container{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/*======= Media queries (max-width: 630px) =======*/
+@media screen and (max-width: 630px) {
+  .main-title .title-part-one{
+    font-size: 15vw;
+    margin-bottom: 20px;
+  }
+
+  .main-title .title-part-two{
+    font-size: 7.5vw;
+  }
+  
+  .main-title .title-part-two .letter{
+    width: 45px;
+  }
+}
+
+/*======= Media queries (max-width: 415px) =======*/
+@media screen and (max-width: 415px) {
+
+  .main-title .title-part-two .letter{
+    width: 40px;
+  }
+
+  .card-container{
+    margin: 0 20px;
+  }
+
+  .card{
+    width: 100%;
+  }
+
+}
